@@ -1,0 +1,34 @@
+{
+  "months": {
+    "1":  "January",
+    "2":  "February",
+    "3":  "March",
+    "4":  "April",
+    "5":  "May",
+    "6":  "Jun",
+    "7":  "July",
+    "8":  "August",
+    "9":  "September",
+    "10": "October",
+    "11": "November",
+    "12": "December"
+  },
+  "weekdays": {
+    "1":  "Monday",
+    "2":  "Tuesday",
+    "3":  "Wednesday",
+    "4":  "Thursday",
+    "5":  "Friday",
+    "6":  "Saturday",
+    "7":  "Sunday"
+  },
+  "basic.mustache": {
+    "title":  "This is the title of the basic template",
+    "text":   "Text that explains what is this template about"
+  },
+  "flags.mustache": {
+    "change_language":  "Change the language:",
+    "spanish":          "into spanish",
+    "english":          "into english"
+  }
+}

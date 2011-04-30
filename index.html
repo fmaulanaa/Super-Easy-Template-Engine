@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Kuapay</title>
+    <link href="stylesheets/basic.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <script src="javascripts/lib/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="javascripts/lib/jquery-cookie.js" type="text/javascript"></script>
+    
+    <!-- Basic Libraries -->
+    <script src="javascripts/lib/mustache.js" type="text/javascript"></script>
+    <script src="javascripts/lib/templates.js" type="text/javascript"></script>
+    <script src="javascripts/lib/locale.js" type="text/javascript"></script>
+    <script src="javascripts/lib/ajax.js" type="text/javascript"></script>
+
+    <!-- Views -->
+    <script src="javascripts/views/basic_view.js" type="text/javascript"></script>
+    <script src="javascripts/views/flags_view.js" type="text/javascript"></script>
+
+
+    <!-- Main App -->
+    <script src="javascripts/app.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+  <script>
+  
+    if(!console) {
+      var console = {
+        log: function(d) {}   
+      };  
+    }
+
+    var localeApp = new Locale({
+      localesUrl: '/locales'  
+    });
+
+    var baseUrl = new String(window.location.href);
+    
+    var app = new App({
+      baseUrl: baseUrl,
+      templatesUrl: '/templates'
+    });
+
+    var locale = app.getSessionLocale();
+
+    function initApp() { app.init(); }
+
+    function initTotal() {
+      localeApp.load(locale, initApp);
+    }
+
+    localeApp.load('dictionary', initTotal); 
+  </script>
+  </body>
+</html>

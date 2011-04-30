@@ -1,0 +1,74 @@
+Super Easy Templates
+--------------------
+
+This template engine with language support was created to ease the
+life of numerous web developers that didn't want to delegate to the
+server (PHP, Ruby, Python, etc) the tedious task of translating
+all the pages of a website.
+
+How to install this engine
+--------------------------
+
+Just copy all the directory structure into the final directory exp-
+osed to the web server.
+
+In the "index.html" file set the baseUrl variable to the adequate 
+situation.
+
+Open the browser with the URL to the code, and you should see a
+basic screen displaying some explanatory text and two languages
+options, english and spanish.
+
+How to make this work
+---------------------
+
+This template engine consist in three easy steps:
+
+1. Set the Mustache templates acording to your needs. Look at this
+   url if you need more help:
+
+   http://mustache.github.com/
+
+   In this template, whenever you are calling to the proper transla-
+   ted elements, you need to call them by the prefix "template_" :
+
+   {{template_title}}
+
+2. Include the proper Locale in the /locales directory with the same
+   template as the two provided with this library (en, es).
+
+3. Per template name, include the proper tags in the locale file,
+   so, if you are calling for example in the template for the tag:
+
+   {{template_change_language}}
+
+   This is reflected in the locales file:
+
+   "change_language": "Change your languange."
+
+   Inside the section under the name of the template:
+
+   "templateName.mustache": {
+     "change_language": "Change your language"
+   }
+
+4. And create the proper View / Controller / Manager that handles
+   the information you are displaying in this particular template.
+
+  
+----------------------- LICENSE ------------------------------------
+
+Copyright (C) 2011 Joaquin Ayuso de Paul <joaxap@gmail.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

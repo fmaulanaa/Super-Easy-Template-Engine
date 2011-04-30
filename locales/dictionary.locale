@@ -1,0 +1,18 @@
+{
+  "en-US":  {
+      "image":    "images/flag-en-us.png",
+      "file":     "locale/en-US.locale",
+      "name":     "English",
+      "country":  "United States of America",
+      "currency": "USDollar",
+      "symbol":   "$"
+    },
+  "es-ES":  {
+      "image":    "images/flag-es-es.png",
+      "file":     "locale/es-ES.locale",
+      "name":     "Spanish",
+      "country":  "Spain",
+      "currency": "Euro",
+      "symbol":   "€"
+    }
+}
